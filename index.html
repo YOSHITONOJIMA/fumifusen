@@ -2,16 +2,29 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>ふみふうせん IIIF Demo</title>
+<title>ふみふうせん Zoom Demo</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.1.0/openseadragon.min.js"></script>
+
 </head>
 
 <body style="text-align:center; font-family:sans-serif;">
 
-<h1>ふみふうせん IIIF Demo</h1>
+<h1>ふみふうせん Zoom Demo</h1>
 
-<p>世界に向けた日本文化コンテンツ</p>
+<p>拡大できるデジタル展示</p>
 
-<img src="https://raw.githubusercontent.com/YOSHITONOJIMA/fumifusen/main/fumifusen.jpg" width="400">
+<div id="openseadragon1" style="width: 800px; height: 600px; margin:auto;"></div>
+
+<script>
+OpenSeadragon({
+    id: "openseadragon1",
+    tileSources: {
+        type: 'image',
+        url: 'https://raw.githubusercontent.com/YOSHITONOJIMA/fumifusen/main/fumifusen.jpg'
+    }
+});
+</script>
 
 </body>
 </html>
